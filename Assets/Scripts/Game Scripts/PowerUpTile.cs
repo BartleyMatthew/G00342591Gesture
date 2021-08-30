@@ -12,7 +12,6 @@ public class PowerUpTile : MonoBehaviour
         powerUpTiles = GetComponent<Tilemap>();
     }
 
-    // Sets player score +1000 and increases their health
     // Removes the collided tile
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -28,8 +27,19 @@ public class PowerUpTile : MonoBehaviour
                 hitPos.x = hit.point.x + 0.2f;
                 hitPos.y = hit.point.y + 0.2f;
                 powerUpTiles.SetTile(powerUpTiles.WorldToCell(hitPos), null);
-                GameObject.Find("Mario").GetComponent<PlayerMovement>().HandlePowerUp();
+                GameObject.Find("Player").GetComponent<PlayerMovement>().HandlePowerUp();
             } 
+
+
         }
     }
+
+    // So you can't collide with the same block multiple times
+    private IEnumerator CoolDown()
+    {
+        GameObject.Find("Player").GetComponent<PlayerMovement>().headHitBox.SetActive(false);
+        yield return new WaitForSeconds(1);
+        GameObject.Find("Player").GetComponent<PlayerMovement>().headHitBox.SetActive(true);
+    }
+
 }

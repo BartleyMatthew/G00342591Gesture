@@ -28,7 +28,7 @@ public class CoinTile : MonoBehaviour
             {
                 hitPos.x = hit.point.x + 0.2f;
                 hitPos.y = hit.point.y + 0.2f;
-                GameObject.Find("Mario").GetComponent<PlayerMovement>().score+=100;
+                GameObject.Find("Player").GetComponent<PlayerMovement>().score+=100;
                 breakableTiles.SetTile(breakableTiles.WorldToCell(hitPos), null);
             }
         }

@@ -27,7 +27,7 @@ public class HandleHit : MonoBehaviour
         {
             if (collision.collider.name == "BodyHitBox")
             {
-                GameObject.Find("Mario").GetComponent<PlayerMovement>().HandleHit();
+                GameObject.Find("Player").GetComponent<PlayerMovement>().HandleHit();
             }
         }   
     }

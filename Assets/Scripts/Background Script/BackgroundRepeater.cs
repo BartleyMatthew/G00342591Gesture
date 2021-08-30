@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Removed Script
 // Infinite repeating background that follows the player
+// easier for level design - no need for tile map backgrounds
+// dynamic and can be easily changed
 public class BackgroundRepeater : MonoBehaviour
 {
-    private float speed = 0.5f;
+    private float speed = 0.1f;
     private string sortLayer = string.Empty;
     public Material material;
     public MeshRenderer render;

@@ -12,7 +12,7 @@ public class GameGrammar : MonoBehaviour
 {
     // Variables
     private UIManager menuControl;
-    private GameObject mario;
+    private GameObject player;
     private GrammarRecognizer gr;
     private string message;
 
@@ -40,7 +40,7 @@ public class GameGrammar : MonoBehaviour
         actions.Add("menu", Menu);
         actions.Add("stop", Stop);
 
-        mario = GameObject.Find("Mario");
+        player = GameObject.Find("Player");
         gr = new GrammarRecognizer(Path.Combine(Application.streamingAssetsPath,
                                                 "GameOptions.xml"),
                                     ConfidenceLevel.Low);
@@ -48,7 +48,7 @@ public class GameGrammar : MonoBehaviour
         gr.Start();
     }
 
-    // Handling recognised words and invoking the corresponding action
+    // handling recognised words and invoking the corresponding action
     private void GR_OnPhraseRecognized(PhraseRecognizedEventArgs args)
     {
         // read the semantic meanings from the args passed in.
@@ -81,41 +81,41 @@ public class GameGrammar : MonoBehaviour
     // Changes speed to run speed in the PlayerMovement script
     private void Run()
     {
-        mario.GetComponent<PlayerMovement>().isWalking = false;
-        mario.GetComponent<PlayerMovement>().isRunning = true;
-        mario.GetComponent<PlayerMovement>().ChangeSpeed();
+        player.GetComponent<PlayerMovement>().isWalking = false;
+        player.GetComponent<PlayerMovement>().isRunning = true;
+        player.GetComponent<PlayerMovement>().ChangeSpeed();
     }
 
     // Changes speed to the defined walk speed in the PlayerMovement script
     private void Walk()
     {
-        mario.GetComponent<PlayerMovement>().isRunning = false;
-        mario.GetComponent<PlayerMovement>().isWalking = true;
-        mario.GetComponent<PlayerMovement>().ChangeSpeed();
+        player.GetComponent<PlayerMovement>().isRunning = false;
+        player.GetComponent<PlayerMovement>().isWalking = true;
+        player.GetComponent<PlayerMovement>().ChangeSpeed();
     }
 
 
     // Both Left() and Right() handle the direction the player moves
     private void Left()
     {
-        mario.GetComponent<PlayerMovement>().SetDirection("left");
+        player.GetComponent<PlayerMovement>().SetDirection("left");
     }
 
     private void Right()
     {
-        mario.GetComponent<PlayerMovement>().SetDirection("right");
+        player.GetComponent<PlayerMovement>().SetDirection("right");
     }
 
     // Causes the player to jump
     private void Jump()
     {
-        mario.GetComponent<PlayerMovement>().Jump();
+        player.GetComponent<PlayerMovement>().Jump();
     }
 
     // Enters the pipe if the proper conditions are met
     private void Enter()
     {
-        mario.GetComponent<PlayerMovement>().EnterPipe();
+        player.GetComponent<PlayerMovement>().EnterPipe();
     }
 
     // Pauses the game
@@ -158,9 +158,9 @@ public class GameGrammar : MonoBehaviour
     // Ceases player movement
     private void Stop()
     {
-        mario.GetComponent<PlayerMovement>().isRunning = false;
-        mario.GetComponent<PlayerMovement>().isWalking = false;
-        mario.GetComponent<PlayerMovement>().ChangeSpeed();
+        player.GetComponent<PlayerMovement>().isRunning = false;
+        player.GetComponent<PlayerMovement>().isWalking = false;
+        player.GetComponent<PlayerMovement>().ChangeSpeed();
     }
 
     // Returns the player to menu

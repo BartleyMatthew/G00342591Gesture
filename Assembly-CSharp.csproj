@@ -52,20 +52,20 @@
     <UnityVersion>2020.2.0b7</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Game Scripts\DeathZone.cs" />
-    <Compile Include="Assets\Scripts\Enemy Scripts\EnemyBehaviour.cs" />
-    <Compile Include="Assets\Scripts\UI Scripts\HandleScore.cs" />
-    <Compile Include="Assets\Scripts\UI Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\PowerUpTile.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\Enemy Scripts\HandleHit.cs" />
-    <Compile Include="Assets\Scripts\Game Scripts\PipeControl.cs" />
-    <Compile Include="Assets\Scripts\Background Scrip\BackgroundRepeater.cs" />
-    <Compile Include="Assets\Scripts\Game Scripts\CoinTile.cs" />
-    <Compile Include="Assets\Scripts\Grammar Recogniser\MenuGrammar.cs" />
-    <Compile Include="Assets\Scripts\Grammar Recogniser\GameGrammar.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\EnemyBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\WinConditions.cs" />
-    <Compile Include="Assets\Scripts\Game Scripts\PowerUpTile.cs" />
+    <Compile Include="Assets\Scripts\Enemy Scripts\HandleHit.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\DeathZone.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\HandleScore.cs" />
+    <Compile Include="Assets\Scripts\Background Script\BackgroundRepeater.cs" />
+    <Compile Include="Assets\Scripts\Grammar Recogniser\MenuGrammar.cs" />
+    <Compile Include="Assets\Scripts\Grammar Recogniser\GameGrammar.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\CoinTile.cs" />
+    <Compile Include="Assets\Scripts\UI Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\Game Scripts\PipeControl.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\StreamingAssets\MenuOptions.xml" />

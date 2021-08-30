@@ -14,26 +14,26 @@ public class PipeControl : MonoBehaviour
         {
             if (gameObject.name == "EnterZone 1")
             {
-                GameObject.Find("Mario").GetComponent<PlayerMovement>().enterZone1 = true;
+                GameObject.Find("Player").GetComponent<PlayerMovement>().enterZone1 = true;
             }
             else if (gameObject.name == "EnterZone 2")
             {
-                GameObject.Find("Mario").GetComponent<PlayerMovement>().enterZone2 = true;
+                GameObject.Find("Player").GetComponent<PlayerMovement>().enterZone2 = true;
             }
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.name == "Mario")
+        if(collision.gameObject.name == "Player")
         {
             if (gameObject.name == "EnterZone 1")
             {
-                GameObject.Find("Mario").GetComponent<PlayerMovement>().enterZone1 = false;
+                GameObject.Find("Player").GetComponent<PlayerMovement>().enterZone1 = false;
             }
             else if (gameObject.name == "EnterZone 2")
             {
-                GameObject.Find("Mario").GetComponent<PlayerMovement>().enterZone2 = false;
+                GameObject.Find("Player").GetComponent<PlayerMovement>().enterZone2 = false;
             }
         }
     }

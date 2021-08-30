@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
     // This also allows for jumping in current direction
     public void Jump()
     {
-        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+        gameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 9), ForceMode2D.Impulse);
     }
 
     // Handles pipe teleporting depending on where the player is standing
@@ -152,7 +152,7 @@ public class PlayerMovement : MonoBehaviour
     {
         headHitBox.SetActive(false);
         bodyHitBox.SetActive(false);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         headHitBox.SetActive(true);
         bodyHitBox.SetActive(true);
         Debug.Log("Waited 3 seconds");
