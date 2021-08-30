@@ -10,7 +10,7 @@ public class HandleScore : MonoBehaviour
 
     void Start()
     {
-        score = GameObject.Find("Mario").GetComponent<PlayerMovement>().score;
+        score = GameObject.Find("Player").GetComponent<PlayerMovement>().score;
     }
 
     // Prints score to screen

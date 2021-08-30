@@ -130,13 +130,13 @@ public class UIManager : MonoBehaviour
         {
             if (initialTutorial.activeInHierarchy == false && tutorialEnabled == false)
             {
-                SceneManager.LoadScene("MainGame", LoadSceneMode.Single);
+                SceneManager.LoadScene("Game Scene", LoadSceneMode.Single);
             }
         }
         else if(gameComplete.activeInHierarchy == true || gameOver.activeInHierarchy == true)
         {
             Time.timeScale = 1f;
-            SceneManager.LoadScene("MainGame", LoadSceneMode.Single);
+            SceneManager.LoadScene("Game Scene", LoadSceneMode.Single);
         }
         
     }
