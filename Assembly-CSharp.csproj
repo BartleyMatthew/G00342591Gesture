@@ -60,12 +60,12 @@
     <Compile Include="Assets\Scripts\Enemy Scripts\HandleHit.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\DeathZone.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\HandleScore.cs" />
-    <Compile Include="Assets\Scripts\Background Script\BackgroundRepeater.cs" />
     <Compile Include="Assets\Scripts\Grammar Recogniser\MenuGrammar.cs" />
     <Compile Include="Assets\Scripts\Grammar Recogniser\GameGrammar.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\CoinTile.cs" />
     <Compile Include="Assets\Scripts\UI Scripts\CameraScript.cs" />
     <Compile Include="Assets\Scripts\Game Scripts\PipeControl.cs" />
+    <Compile Include="Assets\HandleMenuBackground.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\StreamingAssets\MenuOptions.xml" />
